@@ -90,7 +90,7 @@ export default function CountdownDisplay({
         </p>
         <button
           onClick={onReset}
-          className="bg-gradient-to-r from-green-500 to-emerald-600 text-white font-semibold py-3 px-6 rounded-lg hover:from-green-600 hover:to-emerald-700 transition-all duration-200"
+          className="bg-gradient-to-r from-green-500 to-emerald-600 text-white font-semibold py-3 px-6 rounded-lg hover:from-green-600 hover:to-emerald-700 transition-all duration-200 cursor-pointer"
         >
           Create New Countdown
         </button>
@@ -139,7 +139,7 @@ export default function CountdownDisplay({
       <div className="flex flex-col sm:flex-row gap-4 justify-center">
         <button
           onClick={copyToClipboard}
-          className="bg-gradient-to-r from-blue-500 to-indigo-600 text-white font-semibold py-3 px-6 rounded-lg hover:from-blue-600 hover:to-indigo-700 transition-all duration-200 flex items-center justify-center gap-2"
+          className="bg-gradient-to-r from-blue-500 to-indigo-600 text-white font-semibold py-3 px-6 rounded-lg hover:from-blue-600 hover:to-indigo-700 transition-all duration-200 flex items-center justify-center gap-2 cursor-pointer"
         >
           <svg
             className="w-5 h-5"
@@ -158,7 +158,7 @@ export default function CountdownDisplay({
         </button>
         <button
           onClick={onReset}
-          className="bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-white font-semibold py-3 px-6 rounded-lg hover:bg-gray-300 dark:hover:bg-gray-600 transition-all duration-200"
+          className="bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-white font-semibold py-3 px-6 rounded-lg hover:bg-gray-300 dark:hover:bg-gray-600 transition-all duration-200 cursor-pointer"
         >
           Create New
         </button>
