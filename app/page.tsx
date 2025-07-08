@@ -2,6 +2,7 @@ import { Suspense } from "react";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import CountdownApp from "./components/CountdownApp";
+import Explanation from "./components/Explanation";
 
 export default function Home() {
   return (
@@ -19,6 +20,7 @@ export default function Home() {
           <CountdownApp />
         </Suspense>
 
+        <Explanation />
         <Footer />
       </div>
     </div>
