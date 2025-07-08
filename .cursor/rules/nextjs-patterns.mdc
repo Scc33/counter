@@ -1,0 +1,35 @@
+---
+alwaysApply: true
+---
+# Next.js App Router Patterns
+
+## App Router Structure
+
+- Use the App Router structure with [app/layout.tsx](mdc:app/layout.tsx) as the root layout
+- Implement proper metadata in layout files for SEO
+- Use Suspense boundaries for loading states as shown in [app/page.tsx](mdc:app/page.tsx)
+
+## Client vs Server Components
+
+- Default to server components unless client-side interactivity is needed
+- Use "use client" directive only when necessary (forms, event handlers, browser APIs)
+- Implement proper hydration patterns like in [CountdownApp.tsx](mdc:app/components/CountdownApp.tsx)
+
+## Navigation and State
+
+- Use URL parameters for shareable state (title, date) as implemented in the countdown app
+- Leverage `useSearchParams` and `useRouter` for programmatic navigation
+- Avoid client-side state for data that should be shareable via URL
+
+## Performance Optimization
+
+- Use dynamic imports for heavy components
+- Implement proper loading states with Suspense
+- Optimize images and assets using Next.js built-in optimizations
+- Use Turbopack for development (already configured in [package.json](mdc:package.json))
+
+## SEO and Metadata
+
+- Implement dynamic metadata using [DynamicHead.tsx](mdc:app/components/DynamicHead.tsx)
+- Use proper Open Graph and Twitter card metadata
+- Ensure proper robots.txt and sitemap configuration

@@ -1,0 +1,41 @@
+---
+alwaysApply: true
+---
+# TypeScript Coding Standards
+
+## General Guidelines
+
+- Use strict TypeScript configuration as defined in [tsconfig.json](mdc:tsconfig.json)
+- Prefer explicit type annotations for function parameters and return types
+- Use React.FC or explicit return types for components
+- Leverage TypeScript's path aliases: `@/*` maps to the root directory
+
+## Component Patterns
+
+- Use "use client" directive for client-side components that need interactivity
+- Implement proper hydration handling for components that depend on browser APIs
+- Use Next.js hooks like `useSearchParams` and `useRouter` for navigation
+- Prefer functional components with hooks over class components
+
+## State Management
+
+- Use React's built-in state management (useState, useEffect) for local state
+- Store countdown data in URL parameters for shareability
+- Implement proper loading states for client-side hydration
+
+## Error Handling
+
+- Use proper error boundaries where needed
+- Validate user inputs before processing
+- Handle edge cases in date calculations and formatting
+
+## Code Organization
+
+- Keep components focused and single-purpose
+- Extract reusable logic into custom hooks when appropriate
+- Use descriptive variable and function names
+- Add JSDoc comments for complex functions
+description:
+globs:
+alwaysApply: false
+---

@@ -1,0 +1,83 @@
+---
+alwaysApply: true
+---
+# Development Workflow
+
+## Available Scripts
+
+From [package.json](mdc:package.json):
+- `npm run dev` - Start development server with Turbopack
+- `npm run build` - Build for production
+- `npm run start` - Start production server
+- `npm run lint` - Run ESLint
+
+## Development Best Practices
+
+- Use Turbopack for faster development builds
+- Run linting before committing changes
+- Test the application in both light and dark modes
+- Verify countdown functionality with various date inputs
+- Test URL sharing functionality
+
+## Code Quality
+
+- Follow ESLint configuration in [eslint.config.mjs](mdc:eslint.config.mjs)
+- Use TypeScript strict mode as configured in [tsconfig.json](mdc:tsconfig.json)
+- Maintain consistent code formatting
+- Write meaningful commit messages
+
+## Testing Considerations
+
+- Test countdown accuracy across different timezones
+- Verify responsive design on various screen sizes
+- Test accessibility with screen readers
+- Validate SEO metadata and social sharing
+- Test URL parameter handling and edge cases
+
+## Deployment
+
+- Build the application before deployment
+- Verify all static assets are properly optimized
+- Test the production build locally before deploying
+- Ensure proper environment variables are set
+
+# Development Workflow
+
+## Available Scripts
+
+From [package.json](mdc:package.json):
+- `npm run dev` - Start development server with Turbopack
+- `npm run build` - Build for production
+- `npm run start` - Start production server
+- `npm run lint` - Run ESLint
+
+## Development Best Practices
+
+- Use Turbopack for faster development builds
+- Run linting before committing changes
+- Test the application in both light and dark modes
+- Verify countdown functionality with various date inputs
+- Test URL sharing functionality
+
+## Code Quality
+
+- Follow ESLint configuration in [eslint.config.mjs](mdc:eslint.config.mjs)
+- Use TypeScript strict mode as configured in [tsconfig.json](mdc:tsconfig.json)
+- Maintain consistent code formatting
+- Write meaningful commit messages
+
+## Testing Considerations
+
+- Test countdown accuracy across different timezones
+- Verify responsive design on various screen sizes
+- Test accessibility with screen readers
+- Validate SEO metadata and social sharing
+- Test URL parameter handling and edge cases
+
+## Deployment
+
+- Build the application before deployment
+- Verify all static assets are properly optimized
+- Test the production build locally before deploying
+- Ensure proper environment variables are set
+

@@ -1,0 +1,44 @@
+---
+alwaysApply: true
+---
+# Tailwind CSS Styling Standards
+
+## General Guidelines
+
+- Use Tailwind CSS v4 as configured in [package.json](mdc:package.json)
+- Prefer utility classes over custom CSS
+- Use semantic class names and maintain consistency across components
+
+## Design System
+
+- Use the established color palette: blue-50 to indigo-100 for light mode, gray-900 to gray-800 for dark mode
+- Implement responsive design using Tailwind's responsive prefixes
+- Use consistent spacing with Tailwind's spacing scale
+- Maintain accessibility with proper contrast ratios
+
+## Component Styling Patterns
+
+- Use gradient backgrounds for visual appeal (bg-gradient-to-br)
+- Implement proper dark mode support with dark: prefixes
+- Use container classes for consistent max-widths
+- Apply proper padding and margins for spacing
+
+## Layout Patterns
+
+- Use flexbox and grid utilities for layout
+- Implement proper responsive breakpoints
+- Use max-w-* classes for content width constraints
+- Apply proper centering with flex utilities
+
+## Accessibility
+
+- Ensure proper color contrast ratios
+- Use semantic HTML elements
+- Implement proper focus states
+- Maintain keyboard navigation support
+
+## Performance
+
+- Avoid excessive utility class combinations
+- Use Tailwind's built-in optimizations
+- Minimize custom CSS in favor of utility classes
