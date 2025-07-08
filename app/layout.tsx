@@ -13,6 +13,9 @@ export const metadata: Metadata = {
   keywords:
     "countdown, trip countdown, vacation countdown, travel countdown, share countdown",
   authors: [{ name: "Sean Coughlin", url: "https://seancoughlin.me" }],
+  icons: {
+    icon: "/favicon.png",
+  },
   openGraph: {
     title: "Trip Countdown - Share the Excitement",
     description:
