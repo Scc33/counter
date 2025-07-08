@@ -4,6 +4,8 @@ import { useEffect, useState, Suspense } from "react";
 import { useSearchParams, useRouter } from "next/navigation";
 import CountdownForm from "./components/CountdownForm";
 import CountdownDisplay from "./components/CountdownDisplay";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
 
 function CountdownApp() {
   const searchParams = useSearchParams();
@@ -38,14 +40,7 @@ function CountdownApp() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 dark:from-gray-900 dark:to-gray-800">
       <div className="container mx-auto px-4 py-8">
-        <header className="text-center mb-12">
-          <h1 className="text-4xl md:text-6xl font-bold text-gray-800 dark:text-white mb-4">
-            Trip Countdown
-          </h1>
-          <p className="text-lg text-gray-600 dark:text-gray-300">
-            Share the excitement with your friends!
-          </p>
-        </header>
+        <Header />
 
         <div className="max-w-4xl mx-auto">
           {!title || !targetDate ? (
@@ -59,11 +54,7 @@ function CountdownApp() {
           )}
         </div>
 
-        <footer className="text-center mt-16 text-gray-500 dark:text-gray-400">
-          <p className="text-sm">
-            Share this link with friends to show them the same countdown!
-          </p>
-        </footer>
+        <Footer />
       </div>
     </div>
   );
