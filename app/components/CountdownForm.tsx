@@ -4,6 +4,9 @@ import { useState } from "react";
 import Calendar from "react-calendar";
 import "react-calendar/dist/Calendar.css";
 
+type ValuePiece = Date | null;
+type Value = ValuePiece | [ValuePiece, ValuePiece];
+
 interface CountdownFormProps {
   onSubmit: (title: string, date: string) => void;
 }
@@ -21,7 +24,7 @@ export default function CountdownForm({ onSubmit }: CountdownFormProps) {
     }
   };
 
-  const handleDateChange = (value: any) => {
+  const handleDateChange = (value: Value) => {
     if (value instanceof Date) {
       setDate(value);
       setShowCalendar(false);

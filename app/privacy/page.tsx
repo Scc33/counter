@@ -25,13 +25,13 @@ export default function Privacy() {
                 </h2>
                 <p className="text-green-700 dark:text-green-300">
                   We believe privacy should be simple. Trip Countdown is
-                  designed to be completely private by default - we don't
+                  designed to be completely private by default - we don&apos;t
                   collect, store, or track any personal information.
                 </p>
               </div>
 
               <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">
-                What We Don't Collect
+                What We Don&apos;t Collect
               </h2>
 
               <ul className="space-y-4 text-gray-700 dark:text-gray-300 mb-8">
@@ -76,8 +76,8 @@ export default function Privacy() {
                 <li className="flex items-start">
                   <span className="text-blue-500 mr-3">•</span>
                   <span>
-                    Your countdown data is stored locally in your browser's URL
-                    parameters
+                    Your countdown data is stored locally in your browser&apos;s
+                    URL parameters
                   </span>
                 </li>
                 <li className="flex items-start">
@@ -121,15 +121,15 @@ export default function Privacy() {
                 <li className="flex items-start">
                   <span className="text-blue-500 mr-3">•</span>
                   <span>
-                    <strong>No analytics:</strong> We don't use Google
+                    <strong>No analytics:</strong> We don&apos;t use Google
                     Analytics, Facebook Pixel, or any tracking tools
                   </span>
                 </li>
                 <li className="flex items-start">
                   <span className="text-blue-500 mr-3">•</span>
                   <span>
-                    <strong>No advertising:</strong> We don't display ads or use
-                    ad networks
+                    <strong>No advertising:</strong> We don&apos;t display ads
+                    or use ad networks
                   </span>
                 </li>
               </ul>
@@ -139,8 +139,9 @@ export default function Privacy() {
               </h2>
 
               <p className="text-gray-700 dark:text-gray-300 mb-6">
-                Since we don't collect personal data, there's nothing to
-                request, modify, or delete. Your privacy is protected by design.
+                Since we don&apos;t collect personal data, there&apos;s nothing
+                to request, modify, or delete. Your privacy is protected by
+                design.
               </p>
 
               <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">
@@ -159,8 +160,8 @@ export default function Privacy() {
 
               <p className="text-gray-700 dark:text-gray-300 mb-8">
                 If you have any questions about this privacy policy, please
-                contact us. We're committed to transparency and would be happy
-                to clarify anything about how we protect your privacy.
+                contact us. We&apos;re committed to transparency and would be
+                happy to clarify anything about how we protect your privacy.
               </p>
 
               <div className="bg-blue-50 dark:bg-blue-900/20 rounded-lg p-6">

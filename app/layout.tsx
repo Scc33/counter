@@ -1,14 +1,18 @@
 import type { Metadata } from "next";
+import { Suspense } from "react";
 import "./globals.css";
 import DynamicHead from "./components/DynamicHead";
 
 export const metadata: Metadata = {
+  metadataBase: new URL(
+    process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:3000"
+  ),
   title: "Trip Countdown - Share the Excitement with Friends",
   description:
     "Create beautiful, shareable countdown timers for your upcoming trips. No signup required - just create and share!",
   keywords:
     "countdown, trip countdown, vacation countdown, travel countdown, share countdown",
-  authors: [{ name: "Trip Countdown" }],
+  authors: [{ name: "Sean Coughlin", url: "https://seancoughlin.me" }],
   openGraph: {
     title: "Trip Countdown - Share the Excitement",
     description:
@@ -43,7 +47,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <DynamicHead />
+      <Suspense fallback={null}>
+        <DynamicHead />
+      </Suspense>
       <body className={`antialiased`}>{children}</body>
     </html>
   );

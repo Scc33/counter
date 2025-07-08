@@ -9,14 +9,15 @@ export default function CountdownApp() {
   const searchParams = useSearchParams();
   const router = useRouter();
   const [isClient, setIsClient] = useState(false);
-
-  // Get countdown data from URL parameters
-  const title = searchParams.get("title") || "";
-  const targetDate = searchParams.get("date") || "";
+  const [title, setTitle] = useState("");
+  const [targetDate, setTargetDate] = useState("");
 
   useEffect(() => {
     setIsClient(true);
-  }, []);
+    // Get countdown data from URL parameters after client-side hydration
+    setTitle(searchParams.get("title") || "");
+    setTargetDate(searchParams.get("date") || "");
+  }, [searchParams]);
 
   const updateCountdown = (newTitle: string, newDate: string) => {
     const params = new URLSearchParams();
