@@ -1,10 +1,10 @@
 import { Suspense } from "react";
-import Header from "./components/Header";
-import Footer from "./components/Footer";
-import CountdownForm from "./components/CountdownForm";
-import Explanation from "./components/Explanation";
+import Header from "../components/Header";
+import Footer from "../components/Footer";
+import CountdownPageClient from "../components/CountdownPageClient";
+import CountdownExplanation from "../components/CountdownExplanation";
 
-export default function Home() {
+export default function CountdownPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 dark:from-gray-900 dark:to-gray-800">
       <div className="container mx-auto px-4 py-8">
@@ -13,14 +13,14 @@ export default function Home() {
         <Suspense
           fallback={
             <div className="flex items-center justify-center py-12">
-              <div className="text-lg">Loading...</div>
+              <div className="text-lg">Loading countdown...</div>
             </div>
           }
         >
-          <CountdownForm />
+          <CountdownPageClient />
         </Suspense>
 
-        <Explanation />
+        <CountdownExplanation />
         <Footer />
       </div>
     </div>

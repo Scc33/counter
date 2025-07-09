@@ -1,17 +1,15 @@
 "use client";
 
 import { useState } from "react";
+import { useRouter } from "next/navigation";
 import Calendar from "react-calendar";
 import "react-calendar/dist/Calendar.css";
 
 type ValuePiece = Date | null;
 type Value = ValuePiece | [ValuePiece, ValuePiece];
 
-interface CountdownFormProps {
-  onSubmit: (title: string, date: string) => void;
-}
-
-export default function CountdownForm({ onSubmit }: CountdownFormProps) {
+export default function CountdownForm() {
+  const router = useRouter();
   const [title, setTitle] = useState("");
   const [date, setDate] = useState<Date | null>(null);
   const [showCalendar, setShowCalendar] = useState(false);
@@ -20,7 +18,10 @@ export default function CountdownForm({ onSubmit }: CountdownFormProps) {
     e.preventDefault();
     if (title.trim() && date) {
       const dateString = date.toISOString().split("T")[0];
-      onSubmit(title.trim(), dateString);
+      const params = new URLSearchParams();
+      params.set("title", title.trim());
+      params.set("date", dateString);
+      router.push(`/countdown?${params.toString()}`);
     }
   };
 
