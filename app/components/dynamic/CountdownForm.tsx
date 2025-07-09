@@ -11,6 +11,7 @@ type Value = ValuePiece | [ValuePiece, ValuePiece];
 export default function CountdownForm() {
   const router = useRouter();
   const [title, setTitle] = useState("");
+  const [description, setDescription] = useState("");
   const [date, setDate] = useState<Date | null>(null);
   const [showCalendar, setShowCalendar] = useState(false);
 
@@ -20,6 +21,7 @@ export default function CountdownForm() {
       const dateString = date.toISOString().split("T")[0];
       const params = new URLSearchParams();
       params.set("title", title.trim());
+      params.set("description", description.trim());
       params.set("date", dateString);
       router.push(`/countdown?${params.toString()}`);
     }
@@ -67,6 +69,23 @@ export default function CountdownForm() {
             placeholder="e.g., Beach Vacation, Ski Trip"
             className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-700 dark:text-white"
             required
+          />
+        </div>
+
+        <div>
+          <label
+            htmlFor="description"
+            className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"
+          >
+            Trip Description
+          </label>
+          <input
+            type="text"
+            id="description"
+            value={description}
+            onChange={(e) => setDescription(e.target.value)}
+            placeholder="Trip description"
+            className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-700 dark:text-white"
           />
         </div>
 

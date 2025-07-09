@@ -9,12 +9,14 @@ export default function CountdownPageClient() {
   const router = useRouter();
   const [isClient, setIsClient] = useState(false);
   const [title, setTitle] = useState("");
+  const [description, setDescription] = useState("");
   const [targetDate, setTargetDate] = useState("");
 
   useEffect(() => {
     setIsClient(true);
     // Get countdown data from URL parameters after client-side hydration
     const urlTitle = searchParams.get("title");
+    const urlDescription = searchParams.get("description");
     const urlDate = searchParams.get("date");
 
     if (!urlTitle || !urlDate) {
@@ -24,6 +26,7 @@ export default function CountdownPageClient() {
     }
 
     setTitle(urlTitle);
+    setDescription(urlDescription ?? "");
     setTargetDate(urlDate);
   }, [searchParams, router]);
 
@@ -52,6 +55,7 @@ export default function CountdownPageClient() {
     <div className="max-w-4xl mx-auto">
       <CountdownDisplay
         title={title}
+        description={description}
         targetDate={targetDate}
         onReset={handleReset}
       />

@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 
 interface CountdownDisplayProps {
   title: string;
+  description: string;
   targetDate: string;
   onReset: () => void;
 }
@@ -17,6 +18,7 @@ interface TimeLeft {
 
 export default function CountdownDisplay({
   title,
+  description,
   targetDate,
   onReset,
 }: CountdownDisplayProps) {
@@ -104,6 +106,9 @@ export default function CountdownDisplay({
         <h2 className="text-3xl font-bold text-gray-800 dark:text-white mb-2">
           {title}
         </h2>
+        <p className="text-lg text-gray-600 dark:text-gray-300">
+          {description}
+        </p>
         <p className="text-lg text-gray-600 dark:text-gray-300">
           {formatDate(targetDate)}
         </p>
