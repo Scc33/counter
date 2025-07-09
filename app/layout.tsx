@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Suspense } from "react";
 import "./globals.css";
-import DynamicHead from "./components/DynamicHead";
+import DynamicHead from "./components/dynamic/DynamicHead";
 
 export const metadata: Metadata = {
   metadataBase: new URL(

@@ -1,8 +1,8 @@
 import { Suspense } from "react";
-import Header from "../components/Header";
-import Footer from "../components/Footer";
-import CountdownPageClient from "../components/CountdownPageClient";
-import CountdownExplanation from "../components/CountdownExplanation";
+import Header from "../components/static/Header";
+import Footer from "../components/static/Footer";
+import CountdownPageClient from "../components/dynamic/CountdownPageClient";
+import CountdownExplanation from "../components/static/CountdownExplanation";
 
 export default function CountdownPage() {
   return (

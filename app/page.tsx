@@ -1,8 +1,8 @@
 import { Suspense } from "react";
-import Header from "./components/Header";
-import Footer from "./components/Footer";
-import CountdownForm from "./components/CountdownForm";
-import Explanation from "./components/Explanation";
+import Header from "./components/static/Header";
+import Footer from "./components/static/Footer";
+import CountdownForm from "./components/dynamic/CountdownForm";
+import Explanation from "./components/static/Explanation";
 
 export default function Home() {
   return (
